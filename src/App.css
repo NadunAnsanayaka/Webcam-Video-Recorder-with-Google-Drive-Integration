@@ -1,0 +1,145 @@
+/* Global Styles */
+.app {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header Styles */
+.app-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.app-title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Main Content Styles */
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.webcam-container {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px; /* Restrict max width */
+}
+
+/* Control Buttons Layout */
+.controls-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  justify-content: center;
+}
+
+/* Control Button Styles */
+.control-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px; /* Added margin for better spacing */
+}
+
+/* Start Webcam Button */
+.control-button.start-webcam {
+  background-color: #4caf50;
+  color: white;
+}
+
+.control-button.start-webcam:hover {
+  background-color: #45a049;
+}
+
+/* Start Recording Button */
+.control-button.start-recording {
+  background-color: #2196f3;
+  color: white;
+}
+
+.control-button.start-recording:disabled {
+  background-color: gray;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.control-button.start-recording:hover {
+  background-color: #1e88e5;
+}
+
+/* Stop Recording Button */
+.control-button.stop-recording {
+  background-color: #f44336;
+  color: white;
+}
+
+.control-button.stop-recording:disabled {
+  background-color: gray;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.control-button.stop-recording:hover {
+  background-color: #e53935;
+}
+
+/* Hover Effect for All Buttons */
+.control-button:hover {
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 15px;
+  }
+
+  .app-title {
+    font-size: 1.5rem; /* Adjust title size on smaller screens */
+  }
+
+  .webcam-container {
+    max-width: 100%; /* Allow webcam container to be full width on smaller screens */
+  }
+
+  .controls-container {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Reduce gap between buttons */
+  }
+
+  .control-button {
+    width: 100%; /* Make buttons take up full width */
+    font-size: 1.1rem; /* Increase font size for better readability */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .app-title {
+    font-size: 1.2rem; /* Further reduce title font size */
+  }
+
+  .control-button {
+    padding: 12px 25px; /* Increase button size for easier tapping */
+  }
+
+  .controls-container {
+    gap: 8px;
+  }
+}
